@@ -1,7 +1,8 @@
-// Type definitions for react-image-gallery 0.9
+// Type definitions for react-image-gallery 1.0
 // Project: https://github.com/xiaolin/react-image-gallery
 // Definitions by: Adam Webb <https://github.com/adamwpc>
 //                 William Tio <https://github.com/WToa>
+//                 Nihey Takizawa <https://github.com/nihey>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
@@ -48,11 +49,11 @@ export interface ReactImageGalleryProps {
     showPlayButton?: boolean;
     showFullscreenButton?: boolean;
     disableThumbnailScroll?: boolean;
-    disableArrowKeys?: boolean;
+    disableKeyDown?: boolean;
     disableSwipe?: boolean;
     useBrowserFullscreen?: boolean;
     preventDefaultTouchmoveEvent?: boolean;
-    onErrorImage?: string;
+    onErrorImageURL?: string;
     indexSeparator?: string;
     thumbnailPosition?: 'top' | 'right' | 'bottom' | 'left';
     startIndex?: number;
@@ -62,6 +63,7 @@ export interface ReactImageGalleryProps {
     swipeThreshold?: number;
     swipingTransitionDuration?: number;
     onSlide?: (currentIndex: number) => void;
+    onBeforeSlide?: (nextIndex: number) => void;
     onScreenChange?: (fullScreenElement: Element) => void;
     onPause?: (currentIndex: number) => void;
     onPlay?: (currentIndex: number) => void;
